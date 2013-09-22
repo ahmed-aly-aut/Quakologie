@@ -9,11 +9,15 @@
 Schar::Schar() {
 
 }
-
+/*
+ * Fügt eine Schar hinzu
+ */
 void Schar::hinzufuegen(Quakfaehig* ente) {
 	ar.push_back(ente);
 }
-
+/*
+ * lässt eine Schar quaken
+ */
 void Schar::quaken() {
 	std::vector<Quakfaehig*>::iterator iterator = ar.begin();
 	for (; ar.end() != iterator; ++iterator) {
@@ -21,7 +25,9 @@ void Schar::quaken() {
 		quaker->quaken();
 	}
 }
-
+/*
+ * Registriert die Schar beim Observer
+ */
 void Schar::registriereBeobachter(Beobachter* beobachter) {
 	std::vector<Quakfaehig*>::iterator iterator = ar.begin();
 	for (; ar.end() != iterator; ++iterator) {
@@ -29,10 +35,14 @@ void Schar::registriereBeobachter(Beobachter* beobachter) {
 		quaker->registriereBeobachter(beobachter);
 	}
 }
-
+/*
+ * Benachrichtigt den Observer
+ */
 void Schar::benachrichtigeBeobachtende() {
 }
-
+/*
+ *
+ */
 string Schar::toString() {
 	return "Entenschar";
 }

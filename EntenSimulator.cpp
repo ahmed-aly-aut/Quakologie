@@ -7,11 +7,16 @@
 #include "EntenSimulator.h"
 
 using namespace std;
-
+/*
+ * Diese funktion bringt eine Ente zum quaken
+ */
 void simulieren(Quakfaehig* ente) {
 	ente->quaken();
 }
-
+/*
+ * Main Funktion zum starten der Funktionalität.
+ * Hinzufügen der Enten und zählen der Quake
+ */
 int main(void) {
 	AbstraktEntenFabrik* entenFabrik(new ZaehlendeEntenFabrik());
 	Quakfaehig* stockEnte = entenFabrik->erzeugeStockEnte();
