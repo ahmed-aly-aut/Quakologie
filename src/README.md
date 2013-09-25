@@ -1,4 +1,0 @@
-Quakologie
-==========
-
-APR HÜ - Quakologie
